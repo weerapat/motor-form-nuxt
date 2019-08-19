@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1>Packages</h1>
+        <h1 class="title">Packages</h1>
 
         <div class="panel panel-success"
           v-for="(carPackage, index) in carPackages"
@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style>
-  h1 {
+  .title {
     margin-top: 50px;
   }
 </style>
