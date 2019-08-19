@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-8 col-md-offset-2">
         <a href="/">Go back to homepage</a>
-        <h1>Hello new lead form</h1>
+        <h1 class="title">Hello new lead form</h1>
         <form>
           <div class="form-group">
             <label for="email">{{ $t('lead_form.email') }}</label>
@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style>
-  h1 {
+  .title {
     margin-top: 50px;
   }
 </style>
