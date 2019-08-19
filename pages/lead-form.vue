@@ -14,8 +14,25 @@
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
           </div>
           <div class="form-group">
-            <label for="exampleInputFile">File input</label>
-            <input type="file" id="exampleInputFile">
+            <label for="car-model">Select list:</label>
+            <select class="form-control" id="car-model" v-model="user.carModel">
+              <option value="" selected>Please select</option>
+              <option value="honda">Honda</option>
+              <option value="toyota">Toyota</option>
+              <option value="bmw">BMW</option>
+              <option value="mazda">Mazda</option>
+            </select>
+          </div>
+
+          <div class="form-group" v-show="user.carModel">
+            <label for="desc">Please add detail about your car : {{ user.carModel }}</label>
+            <input type="text" class="form-control" id="desc" placeholder="Please enter">
+          </div>
+
+          <div class="form-group">
+            <label class="radio-inline"><input type="radio" name="optradio" checked>Option 1</label>
+            <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+            <label class="radio-inline"><input type="radio" name="optradio">Option 3</label>
             <p class="help-block">Example block-level help text here.</p>
           </div>
           <div class="checkbox">
@@ -38,6 +55,13 @@ import Logo from '~/components/Logo.vue'
 
 export default {
   components: {
+  },
+  data() {
+    return {
+      user: {
+        carModel: '',
+      }
+    }
   }
 }
 </script>
