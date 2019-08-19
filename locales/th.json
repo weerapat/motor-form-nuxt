@@ -1,0 +1,11 @@
+{
+  "links": {
+    "home": "Home",
+    "lead_form": "ลีดฟอร์ม",
+    "english": "English version",
+    "thai": "Thai version"
+  },
+  "lead_form": {
+    "email": "อีเมล"
+  }
+}
