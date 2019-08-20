@@ -7,11 +7,19 @@
         <form>
           <div class="form-group">
             <label for="email">{{ $t('lead_form.email') }}</label>
-            <input type="email" class="form-control" id="email" placeholder="Email">
+            <input
+              type="email"
+              v-validate="'required'"
+              class="form-control"
+              name="email"
+              id="email"
+              placeholder="Email">
+            <span class="text-danger">{{ errors.first('email') }}</span>
           </div>
+
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
           </div>
           <div class="form-group">
             <label for="car-model">Select list:</label>
@@ -41,11 +49,8 @@
             </label>
           </div>
           <button type="submit" class="btn btn-success">Submit</button>
-
           <a href="/package-listing" class="btn btn-danger">Start Compare!!</a>
-
           <NuxtLink to="/package-listing">Start Compare!!</NuxtLink>
-
         </form>
       </div>
     </div>
