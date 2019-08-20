@@ -12,9 +12,7 @@
 
           </div>
           <div class="panel-body">
-            <a  href="/checkout"
-              class="btn btn-success pull-right">Buy
-            </a>
+            <NuxtLink to="/checkout" class="btn btn-success pull-right">Buy</NuxtLink>
             <div>Price: {{ carPackage.price }}</div>
             <div>Deduct: {{ carPackage.deductible_amount }}</div>
             <div>Total price: {{ carPackage.price - carPackage.deductible_amount }}</div>
