@@ -44,6 +44,8 @@
 
           <a href="/package-listing" class="btn btn-danger">Start Compare!!</a>
 
+          <NuxtLink to="/package-listing">Start Compare!!</NuxtLink>
+
         </form>
       </div>
     </div>
