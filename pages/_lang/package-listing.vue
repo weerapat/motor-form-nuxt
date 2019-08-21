@@ -18,8 +18,6 @@
           </div>
         </div>
 
-<!--        <input v-model="search" type="text">-->
-
         <div class="form-group">
           <label for="search">Search</label>
           <input v-model="search" type="text" class="form-control" id="search" placeholder="Search post">
