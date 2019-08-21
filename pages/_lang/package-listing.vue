@@ -9,7 +9,6 @@
         >
           <div class="panel-heading">
             <h3 class="panel-title">{{ carPackage.name }}</h3>
-
           </div>
           <div class="panel-body">
             <NuxtLink to="/checkout" class="btn btn-success pull-right">Buy</NuxtLink>
@@ -18,19 +17,35 @@
             <div>Total price: {{ carPackage.price - carPackage.deductible_amount }}</div>
           </div>
         </div>
+
+        <div class="panel panel-danger"
+          v-for="(post, id) in posts"
+        >
+          <div class="panel-heading">
+            <h3 class="panel-title">{{ post.title }}</h3>
+          </div>
+          <div class="panel-body">
+            <p>{{ post.body }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
+  mounted() {
+    this.$axios.get('https://jsonplaceholder.typicode.com/posts')
+      .then(res => {
+        this.posts = res.data;
+      });
   },
+
   data() {
     return {
+      posts: [],
+
       carPackages: [
         {
           name: 'Viriyah',
@@ -44,7 +59,6 @@ export default {
         }
       ]
     }
-
   }
 }
 </script>

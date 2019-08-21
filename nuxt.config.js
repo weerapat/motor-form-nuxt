@@ -51,6 +51,9 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     // 'bootstrap-vue/nuxt',
+    // Doc: https://github.com/nuxt-community/axios-module#usage
+    '@nuxtjs/axios',
+
     ['nuxt-validate', {
       lang: 'th',
       nuxti18n: true
