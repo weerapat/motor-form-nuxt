@@ -18,8 +18,13 @@
           </div>
         </div>
 
+        <div class="form-group">
+          <label for="search">Search</label>
+          <input v-model="search" type="text" class="form-control" id="search" placeholder="Search post">
+        </div>
+
         <div class="panel panel-danger"
-          v-for="(post, id) in posts"
+          v-for="post in filteredPosts"
         >
           <div class="panel-heading">
             <h3 class="panel-title">{{ post.title }}</h3>
@@ -45,7 +50,7 @@ export default {
   data() {
     return {
       posts: [],
-
+      search: '',
       carPackages: [
         {
           name: 'Viriyah',
@@ -58,6 +63,14 @@ export default {
           deductible_amount: 1000,
         }
       ]
+    }
+  },
+
+  computed: {
+    filteredPosts() {
+      return this.posts.filter((post) => {
+        return post.title.match(this.search);
+      })
     }
   }
 }
