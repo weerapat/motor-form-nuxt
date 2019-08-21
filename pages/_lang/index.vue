@@ -10,12 +10,12 @@
           New motor form
         </h2>
         <div class="links">
-          <a
-            href="lead-form"
+          <NuxtLink
+            to="/lead-form"
             class="button--green"
           >
             Go to new motor lead form
-          </a>
+          </NuxtLink>
         </div>
       </div>
     </div>
